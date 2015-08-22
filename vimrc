@@ -4,10 +4,9 @@ set backspace=indent,eol,start
 
 call plug#begin('~/vimfiles/plugged')
 Plug 'altercation/vim-colors-solarized'
-Plug 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim' " That this one is in the bag
 Plug 'StanAngeloff/php.vim'
-Plug 'bling/vim-airline'
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 " Interface
@@ -36,7 +35,6 @@ set smartcase " Ignore case if search pattern is all lowercase,
 " Code monkey
 set number
 set relativenumber
-set ruler
 set showmatch " Set show matching parenthesis
 set history=10000
 set undolevels=10000
@@ -57,5 +55,5 @@ nnoremap ; :
 imap <A-l> <Esc>
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>sv :so $MYVIMRC<CR>
-
+let g:ctrlp_map='<c-p>'
 autocmd Filetype gitcommit setlocal spell textwidth=72
