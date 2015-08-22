@@ -1,49 +1,59 @@
 set nocompatible
 filetype plugin indent on
-syntax enable
+set backspace=indent,eol,start
 
 call plug#begin('~/vimfiles/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'kien/ctrlp.vim'
-Plug 'bling/vim-airline'
 Plug 'StanAngeloff/php.vim'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
-" Visual
+" Interface
 set guifont=DejaVu\ Sans\ Mono:h12
 set background=dark
+set guioptions-=m
+set guioptions-=T
 let solarized_termcolors=256
 let solarized_contrast="high"
 colorscheme solarized
+syntax on
 
-" Text formatting
+" Tab and space
 set tabstop=4 " Tab to 4 spaces
+set autoindent
+set copyindent
 set shiftwidth=4 " Number of spaces to use for autoindenting
-set expandtab
-set autoindent
-set nowrap
+set shiftround " Use multiple shiftwidth when indenting with '<' and '>'
 
-" TEST
-set autoindent
-
-set backspace=indent,eol,start
-
-" Search without enter
-set incsearch
+" Search
+set incsearch " Show search matches as you type
 set ignorecase
+set smartcase " Ignore case if search pattern is all lowercase,
+              " case-sensitive otherwise
+
+" Code monkey
 set number
-set rnu
-set showcmd
+set relativenumber
 set ruler
+set showmatch " Set show matching parenthesis
+set history=10000
+set undolevels=10000
+set visualbell
+set noerrorbells " Stop beeping robot!
+
+" We live in one helluva fucked up world
+set nobackup
+set noswapfile
 
 " International
 set encoding=utf-8
 set fileformats=unix,dos,mac
 
-set history=10000
-
 " Key helper
 let mapleader=" "
+nnoremap ; :
 imap <A-l> <Esc>
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>sv :so $MYVIMRC<CR>
