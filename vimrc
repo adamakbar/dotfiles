@@ -4,7 +4,7 @@ set backspace=indent,eol,start
 
 call plug#begin('~/vimfiles/plugged')
 Plug 'altercation/vim-colors-solarized'
-Plug 'kien/ctrlp.vim' " That this one is in the bag
+Plug 'kien/ctrlp.vim'
 Plug 'StanAngeloff/php.vim'
 Plug 'tpope/vim-surround'
 call plug#end()
@@ -71,9 +71,18 @@ nmap <leader>l <C-w>l
 let g:ctrlp_map='<c-p>'
 set wildignore+=*\\vendor\\*,*.swp,*.zip,*.exe
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ }
+	\ 'dir': '\v[\/]\.(git|hg|svn)$',
+	\ 'file': '\v\.(exe|so|dll)$',
+	\ }
 let g:ctrlp_working_path_mode = 'r'
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" Language specific
+autocmd FileType css,html setlocal tabstop=2
+autocmd FileType css,html setlocal softtabstop=2
+autocmd FileType css,html setlocal shiftwidth=2
+
+autocmd BufRead,BufNewFile *.blade.php setlocal tabstop=2
+autocmd BufRead,BufNewFile *.blade.php setlocal softtabstop=2
+autocmd BufRead,BufNewFile *.blade.php setlocal shiftwidth=2
