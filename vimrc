@@ -7,6 +7,10 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'kien/ctrlp.vim'
 Plug 'StanAngeloff/php.vim'
 Plug 'tpope/vim-surround'
+Plug 'othree/html5.vim'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'chrisbra/Colorizer'
+Plug 'xsbeats/vim-blade'
 call plug#end()
 
 " Interface
@@ -59,6 +63,8 @@ imap <A-l> <Esc>
 set mouse=a
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>sv :so $MYVIMRC<CR>
+noremap <leader>y "+y
+noremap <leader>p "+p
 
 " Key split and move like a boss
 nmap vs :vsplit<CR>
@@ -78,12 +84,3 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_working_path_mode = 'r'
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
-
-" Language specific
-autocmd FileType css,html setlocal tabstop=2
-autocmd FileType css,html setlocal softtabstop=2
-autocmd FileType css,html setlocal shiftwidth=2
-
-autocmd BufRead,BufNewFile *.blade.php setlocal tabstop=2
-autocmd BufRead,BufNewFile *.blade.php setlocal softtabstop=2
-autocmd BufRead,BufNewFile *.blade.php setlocal shiftwidth=2
