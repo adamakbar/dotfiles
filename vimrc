@@ -34,6 +34,7 @@ set smartcase " Ignore case if search pattern is all lowercase,
               " case-sensitive otherwise
 
 " Code monkey
+set ruler
 set number
 set relativenumber
 set showmatch " Set show matching parenthesis
