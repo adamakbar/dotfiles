@@ -21,6 +21,7 @@ syntax on
 
 " Tab and space
 set tabstop=4 " Tab to 4 spaces
+set softtabstop=4 " When hitting <BS>, remove like tab even is spaces
 set autoindent
 set copyindent
 set shiftwidth=4 " Number of spaces to use for autoindenting
@@ -38,8 +39,9 @@ set relativenumber
 set showmatch " Set show matching parenthesis
 set history=10000
 set undolevels=10000
-set visualbell
+set novisualbell
 set noerrorbells " Stop beeping robot!
+set autowrite " Auto save on buffer switch
 
 " We live in one helluva fucked up world
 set nobackup
@@ -53,7 +55,25 @@ set fileformats=unix,dos,mac
 let mapleader=" "
 nnoremap ; :
 imap <A-l> <Esc>
+set mouse=a
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>sv :so $MYVIMRC<CR>
+
+" Key split and move like a boss
+nmap vs :vsplit<CR>
+nmap sp :split<CR>
+nmap <leader>h <C-w>h
+nmap <leader>j <C-w>j
+nmap <leader>k <C-w>k
+nmap <leader>l <C-w>l
+
+" ctrlP
 let g:ctrlp_map='<c-p>'
+set wildignore+=*\\vendor\\*,*.swp,*.zip,*.exe
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+let g:ctrlp_working_path_mode = 'r'
+
 autocmd Filetype gitcommit setlocal spell textwidth=72
