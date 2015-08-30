@@ -41,7 +41,6 @@ set smartcase " Ignore case if search pattern is all lowercase,
 
 " Code monkey
 set ruler
-set number
 set relativenumber
 set showmatch " Set show matching parenthesis
 set history=10000
@@ -69,7 +68,7 @@ noremap <leader>y "+y
 noremap <leader>p "+p
 
 " ctrlP
-let g:ctrlp_map='<c-p>'
+let g:ctrlp_map='<c-t>'
 set wildignore+=*\\vendor\\*,*.swp,*.zip,*.exe
 let g:ctrlp_custom_ignore = {
 	\ 'dir': '\v[\/]\.(git|hg|svn)$',
