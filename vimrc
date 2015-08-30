@@ -7,6 +7,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'matchit.zip'
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 " Interface
@@ -30,8 +31,7 @@ set shiftround " Use multiple shiftwidth when indenting with '<' and '>'
 set expandtab " This, ladies and gentlemen, the game changer
 
 autocmd BufRead,BufNewFile *.blade.* setlocal ts=2 sts=2 sw=2
-autocmd FileType css setlocal ts=2 sts=2 sw=2
-autocmd FileType html setlocal ts=2 sts=2 sw=2
+autocmd FileType css,html setlocal ts=2 sts=2 sw=2
 
 " Search
 set incsearch " Show search matches as you type
