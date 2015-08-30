@@ -5,13 +5,16 @@ set backspace=indent,eol,start
 call plug#begin('~/vimfiles/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-surround'
+Plug 'matchit.zip'
 call plug#end()
 
 " Interface
-set guifont=DejaVu\ Sans\ Mono:h12
+set guifont=Hack
 set background=dark
 set guioptions-=m
 set guioptions-=T
+set guioptions-=r
 let solarized_termcolors=256
 let solarized_contrast="high"
 colorscheme solarized
@@ -25,6 +28,10 @@ set copyindent
 set shiftwidth=4 " Number of spaces to use for autoindenting
 set shiftround " Use multiple shiftwidth when indenting with '<' and '>'
 set expandtab " This, ladies and gentlemen, the game changer
+
+autocmd BufRead,BufNewFile *.blade.* setlocal ts=2 sts=2 sw=2
+autocmd FileType css setlocal ts=2 sts=2 sw=2
+autocmd FileType html setlocal ts=2 sts=2 sw=2
 
 " Search
 set incsearch " Show search matches as you type
@@ -78,6 +85,5 @@ nmap <leader>j <C-w>j
 nmap <leader>k <C-w>k
 nmap <leader>l <C-w>l
 nmap <leader>b :CtrlPBookmarkDir<CR>
-
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
