@@ -7,7 +7,6 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'matchit.zip'
-Plug 'pangloss/vim-javascript'
 call plug#end()
 
 " Interface
