@@ -3,10 +3,10 @@ filetype plugin indent on
 set backspace=indent,eol,start
 
 call plug#begin('~/vimfiles/plugged')
-Plug 'altercation/vim-colors-solarized'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'matchit.zip'
+Plug 'xsbeats/vim-blade'
 call plug#end()
 
 " Interface
