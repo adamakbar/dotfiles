@@ -15,10 +15,8 @@ set background=dark
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
-let solarized_termcolors=256
-let solarized_contrast="high"
-colorscheme solarized
-syntax on
+hi Normal guifg=grey guibg=black
+syntax off
 
 " Tab and space
 set tabstop=4 " Tab to 4 spaces
@@ -30,7 +28,7 @@ set shiftround " Use multiple shiftwidth when indenting with '<' and '>'
 set expandtab " This, ladies and gentlemen, the game changer
 
 autocmd BufRead,BufNewFile *.blade.* setlocal ts=2 sts=2 sw=2
-autocmd FileType css,html setlocal ts=2 sts=2 sw=2
+autocmd FileType css,html,js setlocal ts=2 sts=2 sw=2
 
 " Search
 set incsearch " Show search matches as you type
