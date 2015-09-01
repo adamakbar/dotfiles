@@ -16,7 +16,7 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 hi Normal guifg=grey guibg=black
-syntax off
+syntax on
 
 " Tab and space
 set tabstop=4 " Tab to 4 spaces
