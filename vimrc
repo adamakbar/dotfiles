@@ -15,6 +15,7 @@ set background=dark
 set guioptions-=m
 set guioptions-=T
 set guioptions-=r
+set guioptions-=L
 hi Normal guifg=grey guibg=black
 syntax on
 
