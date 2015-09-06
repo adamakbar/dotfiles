@@ -7,6 +7,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'matchit.zip'
 Plug 'xsbeats/vim-blade'
+Plug 'StanAngeloff/php.vim'
 call plug#end()
 
 " Interface
@@ -16,8 +17,8 @@ set guioptions-=m
 set guioptions-=T
 set guioptions-=r
 set guioptions-=L
-hi Normal guifg=grey guibg=black
 syntax on
+colorscheme torte
 
 " Tab and space
 set tabstop=4 " Tab to 4 spaces
