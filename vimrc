@@ -8,6 +8,9 @@ Plug 'tpope/vim-surround'
 Plug 'matchit.zip'
 Plug 'xsbeats/vim-blade'
 Plug 'StanAngeloff/php.vim'
+Plug 'mattn/emmet-vim'
+Plug 'mattn/webapi-vim'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 " Interface
@@ -48,6 +51,9 @@ set novisualbell
 set noerrorbells " Stop beeping robot!
 set autowrite " Auto save on buffer switch
 
+" Zen with webapi
+let g:user_emmet_settings = webapi#json#decode(join(readfile(expand('~/vimfiles/snippets.json')), "\n"))
+
 " We live in one helluva fucked up world
 set nobackup
 set noswapfile
@@ -85,3 +91,6 @@ nmap <leader>l <C-w>l
 nmap <leader>b :CtrlPBookmarkDir<CR>
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" Command
+:command! -range Opc '<,'>s/<option>\(.*\)<\/option>/'\1',/g
