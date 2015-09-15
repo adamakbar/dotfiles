@@ -3,6 +3,7 @@ filetype plugin indent on
 set backspace=indent,eol,start
 
 call plug#begin('~/vimfiles/plugged')
+Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'matchit.zip'
@@ -89,6 +90,8 @@ nmap <leader>j <C-w>j
 nmap <leader>k <C-w>k
 nmap <leader>l <C-w>l
 nmap <leader>b :CtrlPBookmarkDir<CR>
+nmap <leader>tt :NERDTreeToggle<CR>
+nnoremap <leader>cd :cd %:p:h<CR>:pwd<CR>
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
