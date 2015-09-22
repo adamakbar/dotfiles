@@ -3,11 +3,9 @@ filetype plugin indent on
 set backspace=indent,eol,start
 
 call plug#begin('~/vimfiles/plugged')
-Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'matchit.zip'
-Plug 'xsbeats/vim-blade'
 Plug 'StanAngeloff/php.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mattn/webapi-vim'
